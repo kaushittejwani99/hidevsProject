@@ -7,7 +7,7 @@ const client = new Client({
 });
 
 // Replace with your Discord bot token
-const TOKEN = 'MTI5MDU5MTEwMzM5Njg3MjI0NA.GRFOIQ.IOsWMTNDHWA7crflp_edl5aVGIZmQ2NP9roN94';  // Make sure to use your actual bot token
+const TOKEN = 'MTI5MDU5MTEwMzM5Njg3MjI0NA.GgShrO.x9SOF8Uwwe9g9vb98aufQ6MppamO-1UgvvkInU';  // Make sure to use your actual bot token
 
 // Array of channel IDs where messages should be sent
 const CHANNEL_IDS = [
