@@ -1,5 +1,6 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const cron = require('node-cron');
+require('dotenv').config();
 
 // Initialize Discord bot
 const client = new Client({
@@ -7,8 +8,7 @@ const client = new Client({
 });
 
 // Replace with your Discord bot token
-const TOKEN = 'MTI5MDU5MTEwMzM5Njg3MjI0NA.GgShrO.x9SOF8Uwwe9g9vb98aufQ6MppamO-1UgvvkInU';  // Make sure to use your actual bot token
-
+const TOKEN = process.env.TOKEN
 // Array of channel IDs where messages should be sent
 const CHANNEL_IDS = [
   '1290613097110835220'  // Replace with actual channel ID
@@ -36,8 +36,8 @@ client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
 
   // Schedule to send a message every day at 7:00 AM
-  cron.schedule('10 7 * * *', () => {
-    const message = 'This is your message sent at 7:10 AM!';
+  cron.schedule('5 3 * * *', () => {
+    const message = 'This is your message sent at 3:05 AM!';
     sendMessageToChannels(message);
   });
 
